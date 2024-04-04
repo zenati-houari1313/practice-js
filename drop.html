@@ -7,6 +7,19 @@
         <link rel="stylesheet" href="drop.css" />
     </head>
     <body>
+        <div class="top-bar-container">
+            <div class="top-bar" id="topBar"></div>
+        </div>
+       
+      
+        <div class="scroll-buttons">
+            <button id="x" class="scroll-btn scrll" onclick="nextpage()">
+                <div class="rotated">></div>
+            </button>
+            <button id="y" class="scroll-btn scrlr" onclick="prevpage()">
+                <div class="rotated"><</div>
+            </button>
+        </div>
         <div id="main-page" class="page">
             <div class="content">
                 <h1>Welcome to shorooq partners</h1>
@@ -15,7 +28,7 @@
                     Pakistan
                 </p>
                 <div class="press">
-                    <button id="main-btn">Get funded</button>
+                    <button  id="main-btn">Get funded</button>
                     <span>press enter ↵</span>
                 </div>
             </div>
@@ -78,6 +91,10 @@
             </div>
         </div>
         <div id="forth-page" class="page hidden">
+            <div id="alert">
+                <p>2 →Great! Let us get to know you and your company be ...</p>
+            </div>
+            
             <div class="content4">
                 <span>
                     2 → Great! Let us get to know you and your company better
@@ -89,10 +106,11 @@
             </div>
         </div>
         <div id="fifth-page" class="page hidden">
-            <div id="alert">
-                <p>2 →Great! Let us get to know you and your company be ...</p>
-            </div>
+       
             <div class="content5">
+                <div id="alert">
+                    <p>2 →Great! Let us get to know you and your company be ...</p>
+                </div>
                 <span>a. What's your first name*</span>
                 <form id="myForm">
                     <input
@@ -121,7 +139,7 @@
             </div>
         </div>
         <div id="sixth-page" class="page hidden">
-            <div id="alert2">
+            <div id="alert">
                 <p>2 →Great! Let us get to know you and your company be ...</p>
             </div>
             <div class="content6">
@@ -153,7 +171,7 @@
             </div>
         </div>
         <div id="seventh-page" class="page hidden">
-            <div id="alert4">
+            <div id="alert">
                 <p>2 →Great! Let us get to know you and your company be ...</p>
             </div>
             <div class="content7">
@@ -196,33 +214,186 @@
             </div>
         </div>
        <div id="eighth-page" class="page hidden">
-        <div id="alert4">
-            <p>2 →Great! Let us get to know you and your company be ...</p>
-        </div>
+    
         <div class="content8">
             <span>e. company origin</span>
             <span class="hq">where is the HQ based</span>
             <form id="countryForm">
-                <label for="country">Select or type a country:</label>
-                <input type="text" id="countryInput" name="countryInput" placeholder="Type to filter countries">
-                <div id="countryList"></div>
-                <button type="submit">Submit</button>
+                
+                <input 
+                type="text" 
+                id="countryInput" 
+                name="countryInput" 
+                placeholder="Type or select an option"
+                class="input-field">
+               
+               
+                    <div id="countryList"></div>
+
               </form>
+              <div
+            id="error-message5"
+            style="display: none;"
+        >
+            <img
+                src="fluent_warning-20-filled.png"
+                alt=""
+                style="width: 20px; height: auto"
+            />
+            oups please make a selection
+            </div>
+              <button id="btn8" value="submit">Ok ✓</button>
+            </div>
+            
+       </div>
+       <div id="nineth-page" class="page hidden">
+     
+            <div class="content9">
+                <span>
+                    f.
+                    Have you referred a company to us in which we have invested?This question is required.*
+                </span>
+                <button id="btn91">
+                    <div id="letter">A</div>
+                   Yes
+                    <div id="checkmark3" style="display: none;">✓</div>
+                </button>
+                <button id="btn92">
+                    <div id="letter">B</div>
+                    No
+                    <div id="checkmark4" style="display: none;">✓</div>
+                </button>
+                <button id="btn93">OK ✓</button>
+            </div>
            
         
        </div>
-           
-      
-     
-     
-        <div class="scroll-buttons">
-            <button id="x" class="scroll-btn scrll" onclick="nextpage()">
-                <div class="rotated">></div>
-            </button>
-            <button id="y" class="scroll-btn scrlr" onclick="prevpage()">
-                <div class="rotated"><</div>
-            </button>
+       <div id="tenth-page" class="page hidden">
+        <div class="content10">
+            <span>
+                g.
+                Tell us more about your official relationship with this company and your role in it?
+            </span>
+          
+            <form id="tell-us-more-form">
+                
+                <input 
+                type="text" 
+                id="tell-us-more" 
+                placeholder="Type answer here"
+                class="input-field">
+               
+               
+
+              </form>
+              <div
+            id="error-message2"
+            style="display: none;"
+        >
+            <img
+                src="fluent_warning-20-filled.png"
+                alt=""
+                style="width: 20px; height: auto"
+            />
+            please fill this in
+            </div>
+            <div class="press">
+                <button id="btn10">OK ✓</button>
+                <span>press enter ↵</span>
+            </div>
         </div>
+      
+   
+    </div>
+    <div id="eleventh-page" class="page hidden">
+        <div class="content11">
+           
+                
+                <span>3→
+                    Let us get more info about the startup
+                </span>
+                <button id="btn11">continue</button>
+       
+    </div>
+    <div id="twelveth-page" class="page hidden">
+        <div class="content12">
+            
+                <span>
+                    a.
+                    Company name
+                </span>
+
+                
+
+                <form id="whats-ur-name">
+                
+                    <input 
+                    type="text" 
+                    id="ur-name" 
+                    placeholder="Type your answer here"
+                    class="input-field">
+                   
+                   
+    
+                  </form>
+                  <button id="btn12">continue</button>
+                  <div
+                  id="error-message3"
+                  style="display: none;"
+              >
+                  <img
+                      src="fluent_warning-20-filled.png"
+                      alt=""
+                      style="width: 20px; height: auto"
+                  />
+                  please fill this in
+                  </div>
+         
+        </div>
+    </div>
+    <div id="thirteenth-page" class="page hidden">
+    
+        <div class="content13">
+            <span>c. and your company website</span>
+            <form id="company-website">
+                <input
+                    type="text"
+                    id="comp-website"
+                    class="input-field"
+                    placeholder="https://"
+                />
+            </form>
+            <div
+                id="error-Message5"
+                style="display: none"
+            >
+                <img
+                    src="fluent_warning-20-filled.png"
+                    alt=""
+                    style="width: 20px; height: auto"
+                />
+                Please fill this in.
+            </div>
+            <div
+            id="error-message6"
+            style="display: none;"
+        >
+            <img
+                src="fluent_warning-20-filled.png"
+                alt=""
+                style="width: 20px; height: auto"
+            />
+            Hmm… that web address doesn’t look right. Check for any typos or errors.
+        </div>
+            <div class="press">
+                <button id="btn13" value="submit">Ok ✓</button>
+                <span>press enter ↵</span>
+            </div>
+        </div>
+    </div>
+    <div id="forteenth-page"  class="page hidden"></div>
+           
         <script src="drop.js"></script>
     </body>
+
 </html>
