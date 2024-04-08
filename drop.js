@@ -17,6 +17,7 @@ const tenthbtn=document.getElementById("btn10");
 const eleventhbtn=document.getElementById("btn11");
 const twelvethbtn=document.getElementById("btn12");
 const thirteenthbtn=document.getElementById("btn13");
+const forteenthbtn=document.getElementById("btn14");
 const scrollBtn = document.querySelector(".scroll-buttons");
 
 
@@ -138,6 +139,16 @@ thirteenthbtn.addEventListener("click", function () {
     
 
 });
+forteenthbtn.addEventListener("click", function () {
+       
+    if (validateInput8()) {
+        document.getElementById("fivteenth-page").classList.remove("hidden");
+        expandWidth()
+       
+    }
+    
+
+});
 
 function showNextPage(step) {
     switch (step) {
@@ -159,34 +170,42 @@ function showNextPage(step) {
             document.getElementById("fifth-page").classList.remove("hidden");
             break;
         case 5:
-            document.getElementById("fifth-page").classList.remove("hidden");
-            document.getElementById("alert").style.opacity=1;
-            
-            break;
-        case 6:
-            if (step === 6 && validateInput()) {
-                document
-                    .getElementById("sixth-page")
-                    .classList.remove("hidden");
+           
+            if ( validateInput()) {
+             
+                document.getElementById("fifth-page").classList.remove("hidden");
             }
 
+            
             break;
+            case 6:
+                if (step === 6 && validateInput()) {
+                    document
+                        .getElementById("sixth-page")
+                        .classList.remove("hidden");
+                } else step -= 1;
+                break;
+
+        
         case 7:
-            if (step === 7 && validateInput2()) {
+            if ( validateInput2()) {
                 document
                     .getElementById("seventh-page")
                     .classList.remove("hidden");
             }
             case 8:
-                if (step === 8 && validateInput3()) {
+                if ( validateInput3()) {
                     document
                         .getElementById("eighth-page")
                         .classList.remove("hidden");
                 }
                 break;
                 case 9:
-                    document.getElementById("nineth-page")
-                    .classList.remove("hidden");
+                    if (validateInput3()) {
+                        document.getElementById("nineth-page")
+                        .classList.remove("hidden");
+                    }
+                
                     break;
                     case 10:
                         document
@@ -206,44 +225,10 @@ function showNextPage(step) {
             
     }
 }
-function showPrevPage(step) {
-    addhidden(step);
-    switch (step) {
-        case 1:
-            document.getElementById("main-page").classList.remove("hidden");
-            break;
-        case 2:
-            document.getElementById("second-page").classList.remove("hidden");
-            break;
-        case 3:
-            document.getElementById("third-page").classList.remove("hidden");
-            break;
-        case 4:
-            document.getElementById("forth-page").classList.remove("hidden");
-            break;
-        case 5:
-            document.getElementById("fifth-page").classList.remove("hidden");
-            
-            break;
-        case 6:
-            if (step === 6 && validateInput()) {
-                document
-                    .getElementById("sixth-page")
-                    .classList.remove("hidden");
-            }
-            break;
-        case 7:
-            document.getElementById("seventh-page").classList.remove("hidden");
-            break;
-            case 8:
-                document.getElementById("eighth-page").classList.remove("hidden");
-                break;
-        
-    }
-}
+
 
 function nextpage() {
-    if (step === 7) return;
+    if (step === 13) return;
     step = step + 1;
     showNextPage(step);
 }
@@ -327,15 +312,15 @@ function validateInput(event) {
     }
 }
 
-document.getElementById("myForm2").addEventListener("input", validateInput2);
+document.getElementById("myForm2").addEventListener("input", validateInput1);
 
 sixthBtn.addEventListener("click", function () {
-    const result = validateInput2();
+    const result = validateInput1();
     if (!result) return;
     document.getElementById("seventh-page").classList.remove("hidden");
 });
 
-function validateInput2(event) {
+function validateInput1(event) {
     var answer = document.getElementById("answer2").value.trim();
     var errorMessage = document.getElementById("errorMessage2");
     var sixthBtn = document.getElementById("sixth-btn");
@@ -398,7 +383,7 @@ function isWebsite(input) {
     return input.includes(".com") || input.includes(".net") || input.includes(".org");
 }
 document.getElementById("countryForm").addEventListener("input", validateInput4);
-btn8.addEventListener("click", function () {
+eighthBtn.addEventListener("click", function () {
   const result = validateInput4();
   if (!result) return;
   document.getElementById("seventh-page").classList.remove("hidden");
@@ -427,7 +412,7 @@ function validateInput4(event) {
   }
 }
 document.getElementById("tell-us-more-form").addEventListener("input", validateInput5);
-btn10.addEventListener("click", function () {
+tenthbtn.addEventListener("click", function () {
     const result = validateInput5();
     if (!result) return;
     document.getElementById("seventh-page").classList.remove("hidden");
@@ -455,14 +440,14 @@ btn10.addEventListener("click", function () {
     }
 }
 document.getElementById("whats-ur-name").addEventListener("input", validateInput6);
-btn12.addEventListener("click", function () {
+twelvethbtn.addEventListener("click", function () {
     const result = validateInput6();
     if (!result) return;
     document.getElementById("thirteenth-page").classList.remove("hidden");
 });
   function validateInput6(event) {
     var answer = document.getElementById("ur-name").value.trim();
-    var errorMessage = document.getElementById("error-message3");
+    var errorMessage = document.getElementById("error-message5");
     var btn = document.getElementById("btn12");
     
    
@@ -483,7 +468,7 @@ btn12.addEventListener("click", function () {
     }
 }
 document.getElementById("company-website").addEventListener("input", validateInput7);
-btn13.addEventListener("click", function () {
+thirteenthbtn.addEventListener("click", function () {
     const result = validateInput7();
     if (!result) return;
     document.getElementById("thirteenth-page").classList.remove("hidden");
@@ -522,6 +507,34 @@ btn13.addEventListener("click", function () {
         return true;
     }
 
+}
+document.getElementById("company-pitch").addEventListener("input", validateInput8);
+forteenthbtn.addEventListener("click", function () {
+    const result = validateInput8();
+    if (!result) return;
+    document.getElementById("seventh-page").classList.remove("hidden");
+});
+  function validateInput8(event) {
+    var answer = document.getElementById("pitch").value.trim();
+    var errorMessage = document.getElementById("error-message6");
+    var btn = document.getElementById("btn14");
+    
+   
+
+    if (answer === "") {
+        errorMessage.style.display = "block";
+        btn.style.display = "none";
+       
+        return false;
+    }
+   else {
+        errorMessage.style.display = "none";
+        btn.style.display = "block"; 
+        btn.addEventListener('click',()=>{
+      
+            })
+        return true;
+    }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var countries = [
