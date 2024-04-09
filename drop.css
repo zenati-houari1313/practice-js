@@ -383,7 +383,7 @@ form{
   width: 300px;
   border: none;
 }
-.error-message,#error-message2,#error-message3 ,#error-message5  {
+.error-message,#error-message2,#error-message3 ,#error-message5,#error-message33 ,#error-message44,#error-message55 {
   display: none;
   background-color: #fcdadf;
   color: hsl(0, 96%, 35%);

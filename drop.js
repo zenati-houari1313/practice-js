@@ -343,7 +343,7 @@ document.getElementById("myForm3").addEventListener("input", validateInput3);
 seventhBtn.addEventListener("click", function () {
     const result = validateInput3();
     if (!result) return;
-    document.getElementById("seventh-page").classList.remove("hidden");
+    document.getElementById("eighth-page").classList.remove("hidden");
 });
 
 function validateInput3(event) {
@@ -386,7 +386,7 @@ document.getElementById("countryForm").addEventListener("input", validateInput4)
 eighthBtn.addEventListener("click", function () {
   const result = validateInput4();
   if (!result) return;
-  document.getElementById("seventh-page").classList.remove("hidden");
+  document.getElementById("nineth-page").classList.remove("hidden");
 });
 
 function validateInput4(event) {
@@ -415,7 +415,7 @@ document.getElementById("tell-us-more-form").addEventListener("input", validateI
 tenthbtn.addEventListener("click", function () {
     const result = validateInput5();
     if (!result) return;
-    document.getElementById("seventh-page").classList.remove("hidden");
+    document.getElementById("eleventh-page").classList.remove("hidden");
 });
   function validateInput5(event) {
     var answer = document.getElementById("tell-us-more").value.trim();
@@ -447,7 +447,7 @@ twelvethbtn.addEventListener("click", function () {
 });
   function validateInput6(event) {
     var answer = document.getElementById("ur-name").value.trim();
-    var errorMessage = document.getElementById("error-message5");
+    var errorMessage = document.getElementById("error-message33");
     var btn = document.getElementById("btn12");
     
    
@@ -471,12 +471,12 @@ document.getElementById("company-website").addEventListener("input", validateInp
 thirteenthbtn.addEventListener("click", function () {
     const result = validateInput7();
     if (!result) return;
-    document.getElementById("thirteenth-page").classList.remove("hidden");
+    document.getElementById("forteenth-page").classList.remove("hidden");
 });
   function validateInput7(event) {
     var answer = document.getElementById("comp-website").value.trim();
     var errorMessage = document.getElementById("error-message5");
-    var message = document.getElementById("error-message6");
+    var message = document.getElementById("error-message44");
     var btn = document.getElementById("btn13");
     
    
@@ -512,11 +512,11 @@ document.getElementById("company-pitch").addEventListener("input", validateInput
 forteenthbtn.addEventListener("click", function () {
     const result = validateInput8();
     if (!result) return;
-    document.getElementById("seventh-page").classList.remove("hidden");
+    document.getElementById("fivteenth-page").classList.remove("hidden");
 });
   function validateInput8(event) {
     var answer = document.getElementById("pitch").value.trim();
-    var errorMessage = document.getElementById("error-message6");
+    var errorMessage = document.getElementById("error-message55");
     var btn = document.getElementById("btn14");
     
    
