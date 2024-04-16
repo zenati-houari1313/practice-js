@@ -1,5 +1,4 @@
 var step = 1;
-var ancien=0;
 const pages = document.querySelectorAll(".page");
 const mainBtn = document.getElementById("main-btn");
 const secondBtn = document.getElementById("second-btn");
@@ -11,293 +10,114 @@ const fifthBtn = document.getElementById("fifth-btn");
 const sixthBtn = document.getElementById("sixth-btn");
 const seventhBtn = document.getElementById("btn7");
 const eighthBtn = document.getElementById("btn8");
-const ninethbtn1=document.getElementById("btn91");
-const ninethbtn2=document.getElementById("btn92");
-const ninethbtn3=document.getElementById("btn93");
-const tenthbtn=document.getElementById("btn10");
-const eleventhbtn=document.getElementById("btn11");
-const twelvethbtn=document.getElementById("btn12");
-const thirteenthbtn=document.getElementById("btn13");
-const forteenthbtn=document.getElementById("btn14");
-const fivteenthbtn=document.getElementById("btn15");
+const ninethbtn1 = document.getElementById("btn91");
+const ninethbtn2 = document.getElementById("btn92");
+const ninethbtn3 = document.getElementById("btn93");
+const tenthbtn = document.getElementById("btn10");
+const eleventhbtn = document.getElementById("btn11");
+const twelvethbtn = document.getElementById("btn12");
+const thirteenthbtn = document.getElementById("btn13");
+const forteenthbtn = document.getElementById("btn14");
 const scrollBtn = document.querySelector(".scroll-buttons");
-   var alertElement = document.getElementById("alert");
-
-const  countrybtn=document.getElementById("countrybtn");
-
-
-
-mainBtn.addEventListener("click", function () {
-    document.getElementById("second-page").classList.remove("hidden"); 
-    scrollBtn.style.opacity = 1;
-
-    
-    expandWidth()
-});
-
-secondBtn.addEventListener("click", function () {
-    document.getElementById("third-page").classList.remove("hidden");
-  expandWidth()
-});
-
-thirdBtn1.addEventListener("click", function () {
-    document.getElementById("forth-page").classList.remove("hidden");
-    expandWidth()
-
-   
-});
-
-thirdBtn2.addEventListener("click", function () {
-    document.getElementById("forth-page").classList.remove("hidden");
-    expandWidth()
-});
-thirdBtn3.addEventListener("click", function () {
-    document.getElementById("forth-page").classList.remove("hidden");
-    expandWidth()
-    /*alertElement.classList.add('show');*/
-    alertElement.style.animationName = "message";
-alertElement.style.animationDuration = "0.5s";
-alertElement.style.animationTimingFunction = "ease-in";
-alertElement.style.opacity = 1;
-alertElement.style.animationDelay = "0.5s";
-    
-
-});
-
-forthBtn.addEventListener("click", function () {
-    document.getElementById("fifth-page").classList.remove("hidden");
-    expandWidth()
-    
-});
-fifthBtn.addEventListener("click", function () {
-   
-    if (validateInput()) {
-        document.getElementById("sixth-page").classList.remove("hidden");
-        expandWidth()
-      
-    }
-});
-sixthBtn.addEventListener("click", function () {
-    
-    if (validateInput2()) {
-        document.getElementById("seventh-page").classList.remove("hidden");
-        expandWidth()
-       
-    }
-});
-
-seventhBtn.addEventListener("click", function () {
-   
-    if (validateInput3()) {
-        document.getElementById("eighth-page").classList.remove("hidden");
-        expandWidth()
-        
-    }
-});
-eighthBtn.addEventListener("click", function () {
-   
-    if (validateInput4()) {
-        document.getElementById("nineth-page").classList.remove("hidden");
-        expandWidth()
-     
-    }
-});
-ninethbtn1.addEventListener("click", function () {
-    document.getElementById("tenth-page").classList.remove("hidden");
-    expandWidth()
-  
-
-});
-ninethbtn2.addEventListener("click", function () {
-    document.getElementById("tenth-page").classList.remove("hidden");
-    expandWidth()
-
-});
-ninethbtn3.addEventListener("click", function () {
-    document.getElementById("tenth-page").classList.remove("hidden");
-    expandWidth()
-
-});
-tenthbtn.addEventListener("click", function () {
-       
-    if (validateInput5()) {
-        document.getElementById("eleventh-page").classList.remove("hidden");
-        expandWidth()
-       
-    }
-    
-
-});
-eleventhbtn.addEventListener("click", function () {
-    document.getElementById("twelveth-page").classList.remove("hidden");
-    expandWidth()
-
-});
-twelvethbtn.addEventListener("click", function () {
-       
-    if (validateInput6()) {
-        document.getElementById("thirteenth-page").classList.remove("hidden");
-        expandWidth()
-       
-    }
-    
-
-});
-thirteenthbtn.addEventListener("click", function () {
-       
-    if (validateInput7()) {
-        document.getElementById("forteenth-page").classList.remove("hidden");
-        expandWidth()
-       
-    }
-    
-
-});
-forteenthbtn.addEventListener("click", function () {      
-    if (validateInput8()) {
-        document.getElementById("fivteenth-page").classList.remove("hidden");
-        expandWidth()
-     }
-});
-fivteenthbtn.addEventListener("click", function () {
-        
-        document.getElementById("sixteenth-page").classList.remove("hidden");
-        expandWidth()
-       
-});
-
-function showNextPage(step) {
-    switch (step) {
-        case 1:
-            document.getElementById("second-page").classList.remove("hidden");
-            
-          
-
-            break;
-        case 2:
-            document.getElementById("third-page").classList.remove("hidden");
-            
-            break;
-        case 3:
-            document.getElementById("forth-page").classList.remove("hidden");
-            
-            break;
-        case 4:
-           
-            document.getElementById("fifth-page").classList.remove("hidden");
-            
-            break;
-        
-            case 5:  
-                if (validateInput()) {
-                    document
-                    .getElementById("sixth-page")
-                    .classList.remove("hidden");
-                    ancien=0;
-                }   
-                else { 
-                         
-                          step = step-1; 
-                          
-                          ancien=step;
-                        }
-                break;
-
-        
-        case 6: 
-            if ( validateInput1()) {
-                document
-                    .getElementById("seventh-page")
-                    .classList.remove("hidden");
-                        ancien=0 ;
-            }
-                else 
-                      { step -= 1; 
-                        ancien=step;
-                    }
-                    break ;
-            case 7:
-                if ( validateInput3()) {
-                    ancien=0 ;
-                    document
-                        .getElementById("eighth-page")
-                        .classList.remove("hidden");
-                           
-                } else
-                { step -= 1; 
-                    ancien=step;
-                }
-                break ;
-                
-                case 8: 
-                    if (validateInput4()) {
-                        document.getElementById("nineth-page")
-                        .classList.remove("hidden");
-                        ancien=0;
-                    } else 
-                    { step -= 1; 
-                        ancien=step;
-                    } 
-                    break ;                  
-                    
-                    case 9: 
-                      
-                                    document.getElementById("tenth-page")
-                                    .classList.remove("hidden");
-                                    ancien=0;
-                
-                    break ; 
-                        case 10:
-                            if ( validateInput5()) {
-                                document
-                                    .getElementById("eleventh-page")
-                                    .classList.remove("hidden");
-                            } else
-                            {   step -= 1; 
-                                ancien=step;
-                            }
-                            
-                            break;
-                     
-                    case 11:
-                        document
-                        .getElementById("twelveth-page")
-                        .classList.remove("hidden");
-
-                        break;
-                        case 12:
-                            if ( validateInput6()) {
-                                document
-                                    .getElementById("thirteenth-page")
-                                    .classList.remove("hidden");
-                            } else
-                            {   step -= 1; 
-                                ancien=step;
-                            }
-                            
-                            break;
-
-
-            
+const alwaysValid = () => true;
+function onClickRemoveHidden(page, validator) {
+    return function () {
+        if (validator()) {
+            console.log('we are here step=', step);
+            step = step + 1;
+            document.getElementById(page).classList.remove("hidden");
+            expandWidth()
+        }
     }
 }
 
+mainBtn.addEventListener("click", function () {
+    step = step + 1;
+    document.getElementById("second-page").classList.remove("hidden");
+    expandWidth()
+    scrollBtn.style.opacity = 1;
+});
+
+secondBtn.addEventListener("click", onClickRemoveHidden("third-page", alwaysValid));
+thirdBtn1.addEventListener("click", onClickRemoveHidden("forth-page", alwaysValid));
+thirdBtn2.addEventListener("click", onClickRemoveHidden("forth-page", alwaysValid));
+thirdBtn3.addEventListener("click", onClickRemoveHidden("forth-page", alwaysValid));
+forthBtn.addEventListener("click", onClickRemoveHidden("fifth-page", alwaysValid));
+fifthBtn.addEventListener("click", onClickRemoveHidden("sixth-page", validateInput));
+sixthBtn.addEventListener("click", onClickRemoveHidden("seventh-page", validateInput1));
+seventhBtn.addEventListener("click", onClickRemoveHidden("eighth-page", validateInput3));
+eighthBtn.addEventListener("click", onClickRemoveHidden("nineth-page", validateInput4));
+ninethbtn1.addEventListener("click", onClickRemoveHidden("tenth-page", alwaysValid));
+ninethbtn2.addEventListener("click", onClickRemoveHidden("tenth-page", alwaysValid));
+ninethbtn3.addEventListener("click", onClickRemoveHidden("tenth-page", alwaysValid));
+tenthbtn.addEventListener("click", onClickRemoveHidden("eleventh-page", validateInput5));
+eleventhbtn.addEventListener("click", onClickRemoveHidden("twelveth-page", alwaysValid));
+twelvethbtn.addEventListener("click", onClickRemoveHidden("thirteenth-page", validateInput6));
+thirteenthbtn.addEventListener("click", onClickRemoveHidden("forteenth-page", validateInput7));
+forteenthbtn.addEventListener("click", onClickRemoveHidden("fivteenth-page", validateInput8));
+
+function showNextPage(step) {
+    console.log(step);
+    switch (step) {
+        case 1:
+            // document.getElementById("second-page").classList.remove("hidden");
+            onClickRemoveHidden("second-page", alwaysValid)();
+           
+            break;
+        case 2:
+            // document.getElementById("third-page").classList.remove("hidden");
+            onClickRemoveHidden("third-page", alwaysValid)();
+            break;
+        case 3:
+            //document.getElementById("forth-page").classList.remove("hidden");
+            onClickRemoveHidden("forth-page", alwaysValid)();
+            break;
+        case 4:
+            //document.getElementById("fifth-page").classList.remove("hidden");
+            onClickRemoveHidden("fifth-page", alwaysValid)();
+            break;
+        case 5:
+            //if (validateInput()) document.getElementById("fifth-page").classList.remove("hidden");
+            onClickRemoveHidden("sixth-page", validateInput)();
+            break;
+        case 6:
+            // if (step === 6 && validateInput()) {
+            //     document.getElementById("sixth-page").classList.remove("hidden");
+            // } else step -= 1;
+            onClickRemoveHidden("seventh-page", validateInput1)();
+            break;
+        case 7:
+            //if (validateInput2()) document.getElementById("seventh-page").classList.remove("hidden");
+            onClickRemoveHidden("eighth-page", validateInput3)();
+        case 8:
+            //if (validateInput3()) document.getElementById("eighth-page").classList.remove("hidden");
+            onClickRemoveHidden("nineth-page", validateInput4)();
+            break;
+        case 9:
+            //if (validateInput3()) document.getElementById("nineth-page").classList.remove("hidden");
+            onClickRemoveHidden("tenth-page", alwaysValid)();
+            break;
+        case 10:
+            //document.getElementById("tenth-page").classList.remove("hidden");
+            onClickRemoveHidden("eleventh-page", validateInput5)();
+        case 11:
+           // if (step === 11 && validateInput5()) document.getElementById("eleventh-page").classList.remove("hidden");
+            onClickRemoveHidden("twelveth-page", alwaysValid)();
+            break;
+
+    }
+}
 
 function nextpage() {
-   
+    //debugger;
     if (step === 13) return;
-    if (ancien===4 || ancien ===5 || ancien ===6  || ancien ===7 || ancien ===8 || ancien ===9)  step=ancien ;
-        
-    step = step + 1;
-   
     showNextPage(step);
+    //step = step + 1;
 }
 
 function prevpage() {
     if (step === 0) return;
     step = step - 1;
-   
-    
     showPrevPage(step);
 }
 
@@ -374,6 +194,26 @@ function validateInput(event) {
     }
 }
 
+function validateInput2(event) {
+    var answer = document.getElementById("answer2").value.trim();
+    var errorMessage = document.getElementById("errorMessage2");
+    var fifthBtn = document.getElementById("sixth-btn");
+
+    if (answer === "") {
+        errorMessage.style.display = "block";
+        fifthBtn.style.display = "none";
+        const button = document.getElementById("x");
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+        });
+        return false;
+    } else {
+        errorMessage.style.display = "none";
+        fifthBtn.style.display = "block";
+        return true;
+    }
+}
+
 document.getElementById("myForm2").addEventListener("input", validateInput1);
 
 sixthBtn.addEventListener("click", function () {
@@ -422,21 +262,21 @@ function validateInput3(event) {
     } else if (!isWebsite(answer)) {
 
         errorMessage.style.display = "none";
-       
-        btn.style.display = "block"; 
-        btn.addEventListener('click',()=>{
-        message4.style.display = "block"; 
-        btn.style.display="none"
+
+        btn.style.display = "block";
+        btn.addEventListener('click', () => {
+            message4.style.display = "block";
+            btn.style.display = "none"
         })
         return false;
     } else {
         errorMessage.style.display = "none";
-        btn.style.display = "block"; 
-        message4.style.display = "none"; 
-        btn.addEventListener('click',()=>{
-        message4.style.display = "none"; 
-      
-            })
+        btn.style.display = "block";
+        message4.style.display = "none";
+        btn.addEventListener('click', () => {
+            message4.style.display = "none";
+
+        })
         return true;
     }
 }
@@ -446,32 +286,32 @@ function isWebsite(input) {
 }
 document.getElementById("countryForm").addEventListener("input", validateInput4);
 eighthBtn.addEventListener("click", function () {
-  const result = validateInput4();
-  if (!result) return;
-  document.getElementById("nineth-page").classList.remove("hidden");
+    const result = validateInput4();
+    if (!result) return;
+    document.getElementById("nineth-page").classList.remove("hidden");
 });
 
 function validateInput4(event) {
-  var answer = document.getElementById("countryInput").value.trim();
-  var errorMessage = document.getElementById("error-message5");
-  var btn = document.getElementById("btn8");
-  
- 
+    var answer = document.getElementById("countryInput").value.trim();
+    var errorMessage = document.getElementById("error-message5");
+    var btn = document.getElementById("btn8");
 
-  if (answer === "") {
-      errorMessage.style.display = "block";
-      btn.style.display = "none";
-     
-      return false;
-  }
- else {
-      errorMessage.style.display = "none";
-      btn.style.display = "block"; 
-      btn.addEventListener('click',()=>{
-    
-          })
-      return true;
-  }
+
+
+    if (answer === "") {
+        errorMessage.style.display = "block";
+        btn.style.display = "none";
+
+        return false;
+    }
+    else {
+        errorMessage.style.display = "none";
+        btn.style.display = "block";
+        btn.addEventListener('click', () => {
+
+        })
+        return true;
+    }
 }
 document.getElementById("tell-us-more-form").addEventListener("input", validateInput5);
 tenthbtn.addEventListener("click", function () {
@@ -479,54 +319,53 @@ tenthbtn.addEventListener("click", function () {
     if (!result) return;
     document.getElementById("eleventh-page").classList.remove("hidden");
 });
-  function validateInput5(event) {
+function validateInput5(event) {
     var answer = document.getElementById("tell-us-more").value.trim();
     var errorMessage = document.getElementById("error-message6");
     var btn = document.getElementById("btn10");
-    
-   
+
+
 
     if (answer === "") {
         errorMessage.style.display = "block";
         btn.style.display = "none";
-       
+
         return false;
     }
-   else {
+    else {
         errorMessage.style.display = "none";
-        btn.style.display = "block"; 
-        btn.addEventListener('click',()=>{
-      
-            })
+        btn.style.display = "block";
+        btn.addEventListener('click', () => {
+
+        })
         return true;
     }
 }
-
 document.getElementById("whats-ur-name").addEventListener("input", validateInput6);
 twelvethbtn.addEventListener("click", function () {
     const result = validateInput6();
     if (!result) return;
     document.getElementById("thirteenth-page").classList.remove("hidden");
 });
-  function validateInput6(event) {
+function validateInput6(event) {
     var answer = document.getElementById("ur-name").value.trim();
     var errorMessage = document.getElementById("error-message7");
     var btn = document.getElementById("btn12");
-    
-   
+
+
 
     if (answer === "") {
         errorMessage.style.display = "block";
         btn.style.display = "none";
-       
+
         return false;
     }
-   else {
+    else {
         errorMessage.style.display = "none";
-        btn.style.display = "block"; 
-        btn.addEventListener('click',()=>{
-      
-            })
+        btn.style.display = "block";
+        btn.addEventListener('click', () => {
+
+        })
         return true;
     }
 }
@@ -536,13 +375,13 @@ thirteenthbtn.addEventListener("click", function () {
     if (!result) return;
     document.getElementById("forteenth-page").classList.remove("hidden");
 });
-  function validateInput7(event) {
+function validateInput7(event) {
     var answer = document.getElementById("comp-website").value.trim();
-    var errorMessage = document.getElementById("error-Message8");
-    var message = document.getElementById("error-message-web");
+    var errorMessage = document.getElementById("error-message5");
+    var message = document.getElementById("error-Message8");
     var btn = document.getElementById("btn13");
-    
-   
+
+
 
     if (answer === "") {
         errorMessage.style.display = "block";
@@ -552,21 +391,21 @@ thirteenthbtn.addEventListener("click", function () {
     } else if (!isWebsite(answer)) {
 
         errorMessage.style.display = "none";
-       
-        btn.style.display = "block"; 
-        btn.addEventListener('click',()=>{
-        message.style.display = "block"; 
-        btn.style.display="none"
+
+        btn.style.display = "block";
+        btn.addEventListener('click', () => {
+            message.style.display = "block";
+            btn.style.display = "none"
         })
         return false;
     } else {
         errorMessage.style.display = "none";
-        btn.style.display = "block"; 
-        message.style.display = "none"; 
-        btn.addEventListener('click',()=>{
-        message.style.display = "none"; 
-      
-            })
+        btn.style.display = "block";
+        message.style.display = "none";
+        btn.addEventListener('click', () => {
+            message.style.display = "none";
+
+        })
         return true;
     }
 
@@ -577,25 +416,25 @@ forteenthbtn.addEventListener("click", function () {
     if (!result) return;
     document.getElementById("fivteenth-page").classList.remove("hidden");
 });
-  function validateInput8(event) {
+function validateInput8(event) {
     var answer = document.getElementById("pitch").value.trim();
     var errorMessage = document.getElementById("error-Message9");
     var btn = document.getElementById("btn14");
-    
-   
+
+
 
     if (answer === "") {
         errorMessage.style.display = "block";
         btn.style.display = "none";
-       
+
         return false;
     }
-   else {
+    else {
         errorMessage.style.display = "none";
-        btn.style.display = "block"; 
-        btn.addEventListener('click',()=>{
-      
-            })
+        btn.style.display = "block";
+        btn.addEventListener('click', () => {
+
+        })
         return true;
     }
 }
@@ -605,75 +444,74 @@ var countries = [
 ];
 
 
-  var countryInput = document.getElementById('countryInput');
-  var countryList = document.getElementById('countryList');
-  var countryForm = document.getElementById('countryForm');
+var countryInput = document.getElementById('countryInput');
+var countryList = document.getElementById('countryList');
+var countryForm = document.getElementById('countryForm');
 
 
-  function displayCountryList() {
+function displayCountryList() {
     countryList.innerHTML = '';
-    countries.forEach(function(country) {
-      var option = document.createElement('div');
-      var countryDiv = document.createElement('div');
-      countryDiv.textContent = country;
-      option.classList.add('countryOption');
-      option.appendChild(countryDiv);
-      option.addEventListener('click', function() {
-        countryInput.value = country;
-        countryList.style.display = 'none';
-      });
-      countryList.appendChild(option);
+    countries.forEach(function (country) {
+        var option = document.createElement('div');
+        var countryDiv = document.createElement('div');
+        countryDiv.textContent = country;
+        option.classList.add('countryOption');
+        option.appendChild(countryDiv);
+        option.addEventListener('click', function () {
+            countryInput.value = country;
+            countryList.style.display = 'none';
+        });
+        countryList.appendChild(option);
     });
     countryList.style.display = 'block';
-  }
+}
 
- 
-  countryForm.addEventListener('click', function(event) {
+
+countryForm.addEventListener('click', function (event) {
     event.stopPropagation();
     if (countryList.style.display === 'block') {
-      countryList.style.display = 'none';
-    
+        countryList.style.display = 'none';
+
     } else {
-      displayCountryList();
-   
+        displayCountryList();
+
     }
-  });
+});
 
 
-
-  countryInput.addEventListener('input', function() {
+countryInput.addEventListener('input', function () {
     var input = this.value.trim().toLowerCase();
     var options = countryList.getElementsByClassName('countryOption');
-    Array.from(options).forEach(function(option) {
-      var country = option.textContent.toLowerCase();
-      if (country.indexOf(input) !== -1) {
-        option.style.display = 'block';
-      } else {
-        option.style.display = 'none';
-      }
+    Array.from(options).forEach(function (option) {
+        var country = option.textContent.toLowerCase();
+        if (country.indexOf(input) !== -1) {
+            option.style.display = 'block';
+        } else {
+            option.style.display = 'none';
+        }
     });
-  });
+});
 
 
-  document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     if (!event.target.closest('form')) {
-      countryList.style.display = 'none';
-     
-    }
-  });
-  ////////////
-  
+        countryList.style.display = 'none';
 
-  /////////////////////////////////////////////////////////////////////////////////
+    }
+});
+////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////
 
 function expandWidth() {
     const topBar = document.getElementById('topBar');
-    const currentWidth = parseFloat(topBar.style.width) || 10; 
-    const newWidth = currentWidth + 35;
+    const currentWidth = parseFloat(topBar.style.width) || 10;
+    const newWidth = currentWidth + 20;
     topBar.style.width = `${newWidth}px`;
-    topBar.style.transitionProperty="width"
-    topBar.style.transitionDuration="0.5s"
+    topBar.style.transitionProperty = "width"
+    topBar.style.transitionDuration = "0.5s"
 }
