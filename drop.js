@@ -89,6 +89,7 @@ function showNextPage(step) {
         case 7:
             //if (validateInput2()) document.getElementById("seventh-page").classList.remove("hidden");
             onClickRemoveHidden("eighth-page", validateInput3)();
+            break;
         case 8:
             //if (validateInput3()) document.getElementById("eighth-page").classList.remove("hidden");
             onClickRemoveHidden("nineth-page", validateInput4)();
@@ -100,17 +101,32 @@ function showNextPage(step) {
         case 10:
             //document.getElementById("tenth-page").classList.remove("hidden");
             onClickRemoveHidden("eleventh-page", validateInput5)();
+            break;
         case 11:
            // if (step === 11 && validateInput5()) document.getElementById("eleventh-page").classList.remove("hidden");
-            onClickRemoveHidden("twelveth-page", alwaysValid)();
-            break;
+         onClickRemoveHidden("twelveth-page", alwaysValid)();
+        break;
+        case 12:
+                // if (step === 11 && validateInput5()) document.getElementById("eleventh-page").classList.remove("hidden");
+                 onClickRemoveHidden("thirteenth-page",validateInput6)();
+          break;
+                 case 13:
+            // if (step === 11 && validateInput5()) document.getElementById("eleventh-page").classList.remove("hidden");
+             onClickRemoveHidden("forteenth-page", validateInput7)();
+                break;
+                case 14:
+                    // if (step === 11 && validateInput5()) document.getElementById("eleventh-page").classList.remove("hidden");
+                     onClickRemoveHidden("fivteenth-page", validateInput8)();
+                        break;
+              
 
     }
 }
 
+
 function nextpage() {
     //debugger;
-    if (step === 13) return;
+    if (step === 15) return;
     showNextPage(step);
     //step = step + 1;
 }
@@ -515,3 +531,4 @@ function expandWidth() {
     topBar.style.transitionProperty = "width"
     topBar.style.transitionDuration = "0.5s"
 }
+// js conditions courses 
