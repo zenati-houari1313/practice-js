@@ -33,7 +33,7 @@ body {
   width: 100%;
   background-color: #141414;
   padding: 20px;
-  transition: transform 0.5s ease;
+  transition: transform 3s ease-in initial ;
   height: 100vh;
 }
 #second-page,#third-page,#forth-page,#fifth-page,#sixth-page,#seventh-page,#eighth-page,#nineth-page,#tenth-page,#eleventh-page,#twelveth-page,#thirteenth-page,#forteenth-page,#fivteenth-page,#sixteenth-page
@@ -45,6 +45,7 @@ body {
 }
 .hidden {
   transform: translateY(100%);
+  
   
 }
 #main-btn:hover,#btn7:hover {
