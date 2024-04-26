@@ -346,18 +346,18 @@ body {
   height: 60px;
   background-color: #333;
   color: #fff;
-  /*transition: transform 2s ease-in forwards infinite; 
-  /*transform: translateY(0px);*/
+  transition: transform 2s ease-in forwards infinite; 
+  transform: translateY(0px);
 
   opacity: 0;
   
  
 }
-/*.alert.show {
+.alert.show {
   transform: translateY(80px);
   opacity: 1;
   
-}*/
+}
 
 
 @keyframes message 

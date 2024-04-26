@@ -122,7 +122,141 @@ function showNextPage(step) {
 
     }
 }
+function showPrevPage(step){
+    console.log(step);
+    
+        switch (step) {
+            case 1:
+                document.getElementById("second-page").classList.add("hidden");
+                document.getElementById("main-page").classList.remove("hidden");
+                scrollBtn.style.opacity = 0
+                decreaseWidth()
+    
+                break;
+            case 2:
+                document.getElementById("third-page").classList.add("hidden");
+                document.getElementById("second-page").classList.remove("hidden");
+                decreaseWidth()
+                break;
+            case 3:
+                document.getElementById("forth-page").classList.add("hidden");
+                document.getElementById("third-page").classList.remove("hidden");
+                decreaseWidth()
+                break;
+            case 4:
+               
+                document.getElementById("fifth-page").classList.add("hidden");
+                document.getElementById("forth-page").classList.remove("hidden");
+                decreaseWidth()
+                break;
+            case 5:
+               
+              
+                 
+                    document.getElementById("sixth-page").classList.add("hidden");
+                    document.getElementById("fifth-page").classList.remove("hidden");
+                    decreaseWidth()
+    
+                
+                break;
+                case 6:
+                        document
+                            .getElementById("seventh-page")
+                            .classList.add("hidden");
+                            document.getElementById("sixth-page").classList.remove("hidden");
+                            decreaseWidth()
+                    
+                    break;
+    
+            
+            case 7:
+                
+                    document
+                        .getElementById("eighth-page")
+                        .classList.add("hidden");
+                        document.getElementById("seventh-page").classList.remove("hidden");
+                        decreaseWidth()
+                
+                break;
+                case 8:
+                    
+                        document
+                            .getElementById("nineth-page")
+                            .classList.add("hidden");
+                            document.getElementById("eighth-page").classList.remove("hidden");
+                            decreaseWidth()
+                    
+                    break;
+                    case 9:
+                     
+                            document.getElementById("tenth-page").classList.add("hidden");
+                            document.getElementById("nineth-page").classList.remove("hidden");
+                            decreaseWidth()
+                        
+                        break;
+                        case 10:
+                            document
+                                        .getElementById("eleventh-page")
+                                        .classList.add("hidden");
+                            document
+                                        .getElementById("tenth-page")
+                                        .classList.remove("hidden"); 
+                                        decreaseWidth()
+                            break;                       
+             
+                            case 11:
+                                document
+                                            .getElementById("twelveth-page")
+                                            .classList.add("hidden");
+                                document
+                                            .getElementById("eleventh-page")
+                                            .classList.remove("hidden"); 
+                                            decreaseWidth()
+                                break; 
+                                case 12:
+                                    document
+                                                .getElementById("thirteenth-page")
+                                                .classList.add("hidden");
+                                    document
+                                                .getElementById("twelveth-page")
+                                                .classList.remove("hidden"); 
+                                                decreaseWidth()
+                                    break; 
+                                    case 13:
+                                        document
+                                                    .getElementById("forteenth-page")
+                                                    .classList.add("hidden");
+                                        document
+                                                    .getElementById("thirteenth-page")
+                                                    .classList.remove("hidden"); 
+                                                    decreaseWidth()
+                                        break; 
+                                        case 14:
+                                            document
+                                                        .getElementById("fivteenth-page")
+                                                        .classList.add("hidden");
+                                            document
+                                                        .getElementById("forteenth-page")
+                                                        .classList.remove("hidden"); 
+                                                        decreaseWidth()
+                                            break; 
+    
+    
+                
+        }
+ }
 
+
+
+
+
+function prevpage() {
+    if (step === 0) {
+        
+        return;}
+    step = step - 1;
+    showPrevPage(step);
+}
 
 function nextpage() {
     //debugger;
@@ -131,11 +265,6 @@ function nextpage() {
     //step = step + 1;
 }
 
-function prevpage() {
-    if (step === 0) return;
-    step = step - 1;
-    showPrevPage(step);
-}
 
 function addhidden(index) {
     pages.forEach((e, i) => {
@@ -531,4 +660,13 @@ function expandWidth() {
     topBar.style.transitionProperty = "width"
     topBar.style.transitionDuration = "0.5s"
 }
+function decreaseWidth() {
+    const topBar = document.getElementById('topBar');
+    const currentWidth = parseFloat(topBar.style.width) || 10;
+    const newWidth = Math.max(currentWidth - 20, 0); // Ensure width doesn't go below 0
+    topBar.style.width = `${newWidth}px`;
+    topBar.style.transitionProperty = "width";
+    topBar.style.transitionDuration = "0.5s";
+}
+
 // js conditions courses 
