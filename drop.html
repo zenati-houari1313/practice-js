@@ -423,11 +423,15 @@
                 <span class="hq">
                     PDF Size is limited to 10MB
                 </span>
-                <div class="img-up">
-                    <img src="Group 8.png" alt="ccc">
-                    <span class="normaletxt">choose file or drag here</span> 
-                    <span class="minitxt">size limit : 10MB</span>
-                </div>
+                <form class="form">
+                    <label id="upload-container" class="form__container">
+                      Choose or Drag & Drop Files
+                      <input id="upload-files" class="form__file" type="file" multiple>
+                    </label>
+                    <div id="files-list-container" class="form">
+                      <!-- Files will be listed here -->
+                    </div>
+                  </form>
             <div
                 id="error-Message5"
                 style="display: none"
